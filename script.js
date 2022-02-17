@@ -6,7 +6,7 @@ function westMoneyAll(billid){
             montleyBillInput.value = '';
             return montleyBill;
         } else if(isNaN(montleyBill)){
-            alert('Opps your type is worng please try again')
+            alert('Opps your type is worng please try again And type the Number')
         }
 
 }
