@@ -41,12 +41,13 @@ document.getElementById('saving-btn').addEventListener('click', function(){
     const savingInput = document.getElementById('saving-input');
     const saving = parseFloat(savingInput.value);
     const totalAmount = totalIncome();
-    const extayMoney = document.getElementById('saving-money');
+    const extayMoneytext = document.getElementById('saving-money');
+    const extayMoney = parseFloat(extayMoneytext.innerText);
     const lastTotal = document.getElementById('last-money');
     const showExtrayInput = document.getElementById('extra-money');
-    const showExtray = parseFloat(showExtrayInput);
-    const finisAmound = showExtray - saving;
-    console.log(finisAmound);
+    const showExtray = parseFloat(showExtrayInput.innerText);
+    const finisAmound = showExtray - extayMoney;
+    lastTotal.innerText = finisAmound;
     const savingTotalAmount = totalAmount / saving;
     extayMoney.innerText = savingTotalAmount;
     
