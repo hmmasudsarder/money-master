@@ -16,7 +16,7 @@ function totalIncome(){
     if(montleySelary > 0){
         return montleySelary;
     } else {
-        alert('Opps Your Income Is Worng Please HardWork Agin I Hope You Can do This Insahallah')
+        alert('Opps Your Income Is Worng Please HardWork Agin I Hope You Can do This Insahallah and Lock The Input and Type The Number')
     }
 }
 
