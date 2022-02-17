@@ -14,8 +14,7 @@ function totalIncome(){
     const moneySelaryInput = document.getElementById('montley-salary');
     const montleySelary = parseFloat(moneySelaryInput.value);
     if(montleySelary > 0){
-        moneySelaryInput.value = '';
-    return montleySelary;
+        return montleySelary;
     } else {
         alert('Opps Your Income Is Worng Please HardWork Agin I Hope You Can do This Insahallah')
     }
@@ -36,11 +35,20 @@ document.getElementById('calcule-btn').addEventListener('click', function(){
     westMoneyInput.innerText = totalWestBill;
     showExtrayInput.innerText = extayMoney;
 });
+
+// saving money 
 document.getElementById('saving-btn').addEventListener('click', function(){
     const savingInput = document.getElementById('saving-input');
     const saving = parseFloat(savingInput.value);
     const totalAmount = totalIncome();
-    const savingTotalAmount =totalAmount / 10;
+    const extayMoney = document.getElementById('saving-money');
+    const lastTotal = document.getElementById('last-money');
+    const showExtrayInput = document.getElementById('extra-money');
+    const showExtray = parseFloat(showExtrayInput);
+    const finisAmound = showExtray - saving;
+    console.log(finisAmound);
+    const savingTotalAmount = totalAmount / saving;
+    extayMoney.innerText = savingTotalAmount;
     
 })
 
