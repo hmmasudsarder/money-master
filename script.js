@@ -5,10 +5,10 @@ function westMoneyAll(billid){
         if(montleyBill > 0){
             montleyBillInput.value = '';
             return montleyBill;
-        } else {
+        } else if(isNaN(montleyBill)){
             alert('Opps your type is worng please try again')
         }
-        
+
 }
 function totalIncome(){
     const moneySelaryInput = document.getElementById('montley-salary');
@@ -36,13 +36,12 @@ document.getElementById('calcule-btn').addEventListener('click', function(){
     westMoneyInput.innerText = totalWestBill;
     showExtrayInput.innerText = extayMoney;
 });
-// document.getElementById('saving-btn').addEventListener('click', function(){
-//     const savingInput = document.getElementById('saving-input');
-//     const saving = parseFloat(savingInput.value);
-//     const 
-//     const totalAmount = totalIncome();
-//     const savingTotalAmount =totalAmount / 10;
+document.getElementById('saving-btn').addEventListener('click', function(){
+    const savingInput = document.getElementById('saving-input');
+    const saving = parseFloat(savingInput.value);
+    const totalAmount = totalIncome();
+    const savingTotalAmount =totalAmount / 10;
     
-// })
+})
 
 
